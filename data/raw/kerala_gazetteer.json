@@ -1,0 +1,125 @@
+{
+  "checked_on": "2026-10-03",
+  "coverage": "Small offline pilot. Unknown places/wards/coordinates require clarification; no geographic boundaries are fabricated.",
+  "places": [
+    {
+      "name": "Chengannur",
+      "aliases": [
+        "Chenganur",
+        "Chengannoor",
+        "ചെങ്ങന്നൂർ",
+        "ചെങ്ങന്നൂര്"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": "Chengannur",
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/taluks/",
+      "latitude": 9.3178608,
+      "longitude": 76.6139049,
+      "coordinate_source": "OpenStreetMap Nominatim",
+      "coordinate_source_url": "https://www.openstreetmap.org/node/1682779066",
+      "coordinates_status": "approximate_place_centroid",
+      "attribution": "OpenStreetMap contributors (ODbL 1.0)",
+      "coordinate_checked_on": "2026-10-03"
+    },
+    {
+      "name": "Cherthala",
+      "aliases": [
+        "ചേർത്തല"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": "Cherthala",
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/taluks/"
+    },
+    {
+      "name": "Ambalappuzha",
+      "aliases": [
+        "Ambalapuzha",
+        "അമ്പലപ്പുഴ"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": "Ambalapuzha",
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/taluks/"
+    },
+    {
+      "name": "Kuttanad",
+      "aliases": [
+        "കുട്ടനാട്"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": null,
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/document/kuttanad-taluk/",
+      "note": "Regional name can extend beyond the taluk; confirm exact locality."
+    },
+    {
+      "name": "Karthikappally",
+      "aliases": [
+        "Karthikapally",
+        "കാർത്തികപ്പള്ളി"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": "Karthikapally",
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/taluks/"
+    },
+    {
+      "name": "Mavelikkara",
+      "aliases": [
+        "Mavelikara",
+        "മാവേലിക്കര"
+      ],
+      "district": "Alappuzha",
+      "district_aliases": [
+        "Alleppey",
+        "ആലപ്പുഴ"
+      ],
+      "taluk": "Mavelikkara",
+      "ward": null,
+      "source_url": "https://alappuzha.nic.in/en/taluks/"
+    },
+    {
+      "name": "Aluva",
+      "aliases": [
+        "Alwaye",
+        "ആലുവ"
+      ],
+      "district": "Ernakulam",
+      "district_aliases": [
+        "എറണാകുളം"
+      ],
+      "taluk": "Aluva",
+      "ward": null,
+      "source_url": "https://ernakulam.nic.in/en/department/taluk/",
+      "latitude": 10.1077682,
+      "longitude": 76.3568532,
+      "coordinate_source": "OpenStreetMap Nominatim",
+      "coordinate_source_url": "https://www.openstreetmap.org/node/1880437827",
+      "coordinates_status": "approximate_place_centroid",
+      "attribution": "OpenStreetMap contributors (ODbL 1.0)",
+      "coordinate_checked_on": "2026-10-03"
+    }
+  ]
+}

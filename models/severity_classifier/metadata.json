@@ -1,0 +1,13 @@
+{
+  "training_source": "synthetic_demo",
+  "training_count": 60,
+  "notice": "Synthetic training examples; uncalibrated demonstration score; admin verification required.",
+  "operational_validation": false,
+  "python_version": "3.13.9",
+  "sklearn_version": "1.9.1",
+  "artifact": "models/severity_classifier/pipeline.joblib",
+  "serving_mode": "validated_local_artifact",
+  "artifact_sha256": "7059306f23ffa05b688710ed43fece7a59509c593e00bdc77a3d142c7d502291",
+  "training_csv_sha256": "3c44299b7d6a28acc2e800d205b3c40d8c0df563d1261d068baba03545b77e03",
+  "evaluation_note": "Held-out metrics use the separate training/test split; serving fits all bundled synthetic examples."
+}

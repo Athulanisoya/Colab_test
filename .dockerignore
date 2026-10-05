@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.git
+.venv
+output
+frontend/node_modules
+frontend/dist
+__pycache__
+**/__pycache__
+.pytest_cache
+data/uploads
+data/*.db*
+models/**/*.joblib

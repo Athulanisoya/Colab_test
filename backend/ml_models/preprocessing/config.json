@@ -1,0 +1,26 @@
+{
+  "analyzer": "word",
+  "binary": false,
+  "decode_error": "strict",
+  "dtype": "<class 'numpy.float64'>",
+  "encoding": "utf-8",
+  "input": "content",
+  "lowercase": true,
+  "max_df": 1.0,
+  "max_features": null,
+  "min_df": 1,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "norm": "l2",
+  "preprocessor": null,
+  "smooth_idf": true,
+  "stop_words": null,
+  "strip_accents": null,
+  "sublinear_tf": true,
+  "token_pattern": "(?u)\\b\\w\\w+\\b",
+  "tokenizer": null,
+  "use_idf": true,
+  "vocabulary": null
+}

@@ -1,0 +1,67 @@
+import {useCallback,useEffect,useState} from 'react';
+import {Bell,Bot,Boxes,ChartNoAxesCombined,ChevronRight,CircleHelp,ClipboardList,Heart,House,LifeBuoy,LogOut,Menu,Newspaper,Plus,Shield,Tent,Users,Waves,X} from 'lucide-react';
+import {api,getSession,setSession} from './services/api';
+import {Button,ErrorNotice,Loading,date,label} from './components/shared/ui';
+import {useData} from './hooks/useData';
+import Login from './components/shared/Login';
+import CitizenDashboard from './pages/citizen/Dashboard';
+import ResponseDashboard from './pages/response_team/Dashboard';
+import AdminDashboard from './pages/admin/Dashboard';
+import MyReports from './pages/citizen/MyReports';
+import Assignments from './pages/response_team/Assignments';
+import IncidentQueue from './pages/admin/IncidentQueue';
+import IncidentDetail from './components/shared/IncidentDetail';
+import ReportForm from './pages/citizen/ReportForm';
+import {Alerts,Shelters,News,Safety} from './components/shared/CommunityInformation';
+import AdminAlerts from './pages/admin/Alerts';
+import AdminShelters from './pages/admin/Shelters';
+import TeamShelters from './pages/response_team/Shelters';
+import ReliefRequests from './pages/citizen/ReliefRequests';
+import ReliefDistribution from './pages/response_team/ReliefDistribution';
+import ReliefInventory from './pages/admin/ReliefInventory';
+import CitizenDonations from './pages/citizen/Donations';
+import AdminDonations from './pages/admin/Donations';
+import AdminNews from './pages/admin/News';
+import AdminSafety from './pages/admin/SafetyTips';
+import Teams from './pages/admin/Teams';
+import UsersPage from './pages/admin/Users';
+import Reports from './pages/admin/Reports';
+import Audit from './pages/admin/AuditLogs';
+import Assistant from './components/shared/Assistant';
+
+const commonNav=[['dashboard','Overview',House],['incidents','My reports',ClipboardList],['alerts','Flood alerts',Shield],['shelters','Find a shelter',Tent],['relief','Relief & supplies',Boxes],['donations','Give support',Heart],['news','Community news',Newspaper],['safety','Safety guidance',CircleHelp]];
+const adminNav=[['dashboard','Overview',House],['incidents','Incident queue',ClipboardList],['alerts','Flood alerts',Shield],['teams','Response teams',LifeBuoy],['shelters','Shelters',Tent],['relief','Relief & inventory',Boxes],['donations','Support campaigns',Heart],['news','News & guidance',Newspaper],['users','People & access',Users],['reports','Reports & insights',ChartNoAxesCombined],['audit','Activity log',ClipboardList]];
+function routeFromHash(){return window.location.hash.replace(/^#\/?/,'')||'dashboard';}
+export default function App(){
+  const [session,updateSession]=useState(getSession),[route,setRoute]=useState(routeFromHash),[menu,setMenu]=useState(false),[chat,setChat]=useState(false),[notificationOpen,setNotificationOpen]=useState(false),[toast,setToast]=useState(null),[verified,setVerified]=useState(false),[sessionError,setSessionError]=useState('');
+  const user=session?.user;
+  useEffect(()=>{const update=()=>{updateSession(getSession());setRoute(routeFromHash());setVerified(false);};const navigate=()=>{setRoute(routeFromHash());setMenu(false);window.scrollTo(0,0);};window.addEventListener('resq-session',update);window.addEventListener('hashchange',navigate);return()=>{window.removeEventListener('resq-session',update);window.removeEventListener('hashchange',navigate);};},[]);
+  useEffect(()=>{if(!session){setVerified(true);return;}let live=true;api('/users/me').then(current=>{if(live){updateSession(prev=>({...prev,user:current}));setVerified(true);setSessionError('');}}).catch(e=>{if(live){setSessionError(e.message);setVerified(true);}});return()=>{live=false;};},[session?.access_token]);
+  useEffect(()=>{if(!toast)return;const timer=setTimeout(()=>setToast(null),5500);return()=>clearTimeout(timer);},[toast]);
+  const notify=useCallback((message,type='success')=>setToast({message,type}),[]);
+  const navigate=useCallback(next=>{window.location.hash=`/${next}`;},[]);
+  const notifications=useData(session?'/notifications':null,{poll:30000});
+  const health=useData(session?'/health':null,{initial:null,poll:60000});
+  const privateResetRoute=route.split('?')[0]==='reset';
+  if(!session||privateResetRoute)return <Login/>;
+  if(!verified)return <div className="boot"><Waves size={40}/><Loading/></div>;
+  if(!user)return <div className="boot"><ErrorNotice message={sessionError||'Session is incomplete. Sign in again.'}/><Button onClick={()=>setSession(null)}>Back to sign in</Button></div>;
+  const isAdmin=user.role==='admin',isTeam=user.role==='response_team';
+  const nav=isAdmin?adminNav:commonNav.map(n=>n[0]==='incidents'&&isTeam?[n[0],'Assigned tasks',n[2]]:n).filter(n=>!(isTeam&&n[0]==='donations'));
+  const active=route.startsWith('incident/')?'incidents':route;
+  const navTitle=nav.find(n=>n[0]===active)?.[1]||'Workspace';
+  const pending=notifications.data?.filter(n=>!n.read&&!n.is_read).length||0;
+  const pageProps={user,navigate,notify};
+  const Dashboard=isAdmin?AdminDashboard:isTeam?ResponseDashboard:CitizenDashboard;
+  const Incidents=isAdmin?IncidentQueue:isTeam?Assignments:MyReports;
+  const AlertsPage=isAdmin?AdminAlerts:Alerts;
+  const SheltersPage=isAdmin?AdminShelters:isTeam?TeamShelters:Shelters;
+  const Relief=isAdmin?ReliefInventory:isTeam?ReliefDistribution:ReliefRequests;
+  const Donations=isAdmin?AdminDonations:CitizenDonations;
+  const NewsPage=isAdmin?AdminNews:News;
+  const SafetyPage=isAdmin?AdminSafety:Safety;
+  let page;
+  if(route.startsWith('incident/'))page=<IncidentDetail key={route} {...pageProps} id={route.split('/')[1]}/>;
+  else switch(route){case 'report':page=user.role==='citizen'?<ReportForm {...pageProps}/>:<Dashboard {...pageProps}/>;break;case 'incidents':page=<Incidents {...pageProps}/>;break;case 'alerts':page=<AlertsPage {...pageProps}/>;break;case 'shelters':page=<SheltersPage {...pageProps}/>;break;case 'relief':page=<Relief {...pageProps}/>;break;case 'donations':page=<Donations {...pageProps}/>;break;case 'news':page=<NewsPage {...pageProps}/>;break;case 'safety':page=<SafetyPage {...pageProps}/>;break;case 'teams':page=isAdmin?<Teams {...pageProps}/>:<Dashboard {...pageProps}/>;break;case 'users':page=isAdmin?<UsersPage {...pageProps}/>:<Dashboard {...pageProps}/>;break;case 'reports':page=isAdmin?<Reports {...pageProps}/>:<Dashboard {...pageProps}/>;break;case 'audit':page=isAdmin?<Audit {...pageProps}/>:<Dashboard {...pageProps}/>;break;default:page=<Dashboard {...pageProps}/>;}
+  return <div className="app-layout"><a className="skip-link" href="#main-content" onClick={e=>{e.preventDefault();document.getElementById('main-content')?.focus();}}>Skip to content</a>{menu?<div className="nav-backdrop" onClick={()=>setMenu(false)}/>:null}<aside className={`sidebar ${menu?'open':''}`}><a className="brand" href="#/dashboard"><span className="brand-icon"><Waves size={25}/></span><span>ResQ<span className="brand-light"> Kerala</span><small>RESPONSE TOGETHER</small></span></a><div className="workspace-label">{isAdmin?'COORDINATION CENTER':isTeam?'RESPONSE WORKSPACE':'COMMUNITY WORKSPACE'}</div><nav aria-label="Main navigation">{nav.map(([key,title,Icon])=><a key={key} href={`#/${key}`} className={active===key?'active':''}><Icon size={19}/><span>{title}</span>{active===key?<ChevronRight size={14}/>:null}</a>)}</nav><div className="sidebar-bottom"><div className="emergency-card"><LifeBuoy size={20}/><div><strong>Need urgent help?</strong><p>Emergency response</p><a href="tel:112">Call 112 <ChevronRight size={13}/></a></div></div><div className="sidebar-user"><span className="avatar">{user.name?.slice(0,1)||'R'}</span><div><strong>{user.name}</strong><small>{label(user.role)} · {user.district||'Kerala'}</small></div><button className="icon-button" aria-label="Sign out" title="Sign out" onClick={async()=>{try{await api('/auth/logout',{method:'POST',body:{refresh_token:session.refresh_token}});}catch{}setSession(null);window.location.hash='/dashboard';}}><LogOut size={17}/></button></div></div></aside><div className="workspace"><header className="topbar"><div className="breadcrumb"><button className="icon-button mobile-menu" onClick={()=>setMenu(true)} aria-label="Open navigation"><Menu/></button><span>Workspace</span><ChevronRight size={14}/><strong>{navTitle}</strong></div><div className="topbar-actions"><span className="demo-pill">{health.data?.demo_mode===false?'RESPONSE WORKSPACE':'DEMO ENVIRONMENT'}</span><button className="icon-button notification-trigger" aria-label={`Notifications${pending?`, ${pending} unread`:''}`} onClick={()=>setNotificationOpen(v=>!v)}><Bell size={19}/>{pending?<i/>:null}</button>{user.role==='citizen'?<Button variant="small" onClick={()=>navigate('report')}><Plus size={16}/>Report an incident</Button>:null}</div></header><main id="main-content" className="main-content" tabIndex={-1}><ErrorNotice message={sessionError}/>{page}</main><footer className="workspace-footer"><span>ResQ Kerala · Community response prototype</span><span><span className={`status-dot ${health.error||health.data?.database===false?'offline':''}`}/>{health.error||health.data?.database===false?'Service unavailable':health.loading?'Connecting to service':'Local service connected'} · Gemma 4 / Ollama</span></footer></div><button className="assistant-launcher" onClick={()=>setChat(v=>!v)} aria-label={chat?'Close safety assistant':'Open safety assistant'}>{chat?<X size={22}/>:<Bot size={23}/ >}<span>{chat?'Close':'Ask ResQ'}</span></button>{chat?<Assistant onClose={()=>setChat(false)}/>:null}{notificationOpen?<aside className="notification-panel"><div className="panel-heading"><h2>Updates for you</h2><button className="icon-button" onClick={()=>setNotificationOpen(false)} aria-label="Close notifications"><X size={18}/></button></div><ErrorNotice message={notifications.error} onRetry={notifications.reload}/>{notifications.loading?<Loading/>:!notifications.data.length?<p className="muted">You’re all caught up. Your report updates appear here.</p>:notifications.data.map(n=><button className={`notification-item ${n.read||n.is_read?'read':''}`} key={n.id} onClick={async()=>{try{await api(`/notifications/${n.id}/read`,{method:'POST'});notifications.reload();if(n.incident_id){navigate(`incident/${n.incident_id}`);setNotificationOpen(false);}}catch(e){notify(e.message,'error');}}}><strong>{n.title||'Response update'}</strong><span>{n.message||n.body}</span><small>{date(n.created_at)}</small></button>)}</aside>:null}{toast?<div className={`toast ${toast.type}`} role="status"><span>{toast.message}</span><button className="icon-button" aria-label="Dismiss notification" onClick={()=>setToast(null)}><X size={16}/></button></div>:null}</div>;
+}

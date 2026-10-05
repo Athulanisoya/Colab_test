@@ -1,0 +1,56 @@
+[
+  {
+    "id": "imd-flood-preparation",
+    "title": "IMD: preparing for floods",
+    "url": "https://imdagrimet.gov.in/Files/Dos_Donts/Floods_Dos_and_Donts.pdf",
+    "checked_on": "2026-10-03",
+    "text": "Prepare an emergency kit and protect documents in waterproof bags. Keep phones charged, follow official weather updates, and know routes to a shelter. Follow evacuation directions from government officials.",
+    "text_malayalam": "അടിയന്തര കിറ്റ് തയ്യാറാക്കുക; രേഖകൾ വെള്ളം കയറാത്ത ബാഗിൽ സൂക്ഷിക്കുക. ഫോൺ ചാർജ് ചെയ്യുക, ഔദ്യോഗിക കാലാവസ്ഥാ അറിയിപ്പുകൾ പിന്തുടരുക, സുരക്ഷാകേന്ദ്രത്തിലേക്കുള്ള വഴി അറിയുക. അധികൃതരുടെ ഒഴിപ്പിക്കൽ നിർദ്ദേശങ്ങൾ പാലിക്കുക.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  },
+  {
+    "id": "imd-flood-evacuation",
+    "title": "IMD: flood evacuation and power hazards",
+    "url": "https://imdagrimet.gov.in/Files/Dos_Donts/Floods_Dos_and_Donts.pdf",
+    "checked_on": "2026-10-03",
+    "text": "Move to higher ground or a safe shelter when directed to evacuate; bring your emergency kit and important documents. Stay away from electric poles and fallen wires. Keep children away from floodwater. Return home only when officials direct that it is safe.",
+    "text_malayalam": "ഒഴിയാൻ നിർദ്ദേശിച്ചാൽ ഉയർന്ന സ്ഥലത്തേക്കോ സുരക്ഷാകേന്ദ്രത്തിലേക്കോ പോകുക; അടിയന്തര കിറ്റും രേഖകളും കൊണ്ടുപോകുക. വൈദ്യുതി തൂണുകളിൽനിന്നും വീണ വയറുകളിൽനിന്നും അകന്നു നിൽക്കുക. കുട്ടികളെ പ്രളയജലത്തിൽനിന്ന് അകറ്റുക. സുരക്ഷിതമാണെന്ന് അധികൃതർ അറിയിച്ചശേഷം മാത്രം മടങ്ങുക.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  },
+  {
+    "id": "cdc-floodwater",
+    "title": "CDC: floodwater safety",
+    "url": "https://www.cdc.gov/floods/safety/floodwater-after-a-disaster-or-emergency-safety.html",
+    "checked_on": "2026-10-03",
+    "text": "Avoid walking or driving through flooded roads. Vehicles and people can be swept away. Floodwater may contain infectious organisms, chemicals, debris and electrical hazards. Even shallow moving water can threaten life, and children are especially vulnerable.",
+    "text_malayalam": "വെള്ളം കയറിയ റോഡിലൂടെ നടക്കുകയോ വാഹനമോടിക്കുകയോ ചെയ്യരുത്. വാഹനങ്ങളും ആളുകളും ഒഴുക്കിൽപ്പെടാം. പ്രളയജലത്തിൽ രോഗാണുക്കൾ, രാസവസ്തുക്കൾ, അവശിഷ്ടങ്ങൾ, വൈദ്യുതി അപകടങ്ങൾ എന്നിവ ഉണ്ടാകാം. ആഴം കുറഞ്ഞ ഒഴുകുന്ന വെള്ളവും ജീവന് ഭീഷണിയാകാം; കുട്ടികൾക്ക് അപകടം കൂടുതലാണ്.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  },
+  {
+    "id": "cdc-electricity",
+    "title": "CDC: electrical safety in a flooded home",
+    "url": "https://www.cdc.gov/floods/safety/reentering-your-flooded-home-safety.html",
+    "checked_on": "2026-10-03",
+    "text": "Do not operate electrical equipment or switch power while standing in water. If reaching the main switch requires entering standing water, ask an electrician to disconnect it. Have an electrician check the electrical system before restoring power.",
+    "text_malayalam": "വെള്ളത്തിൽ നിൽക്കുമ്പോൾ വൈദ്യുതോപകരണങ്ങൾ പ്രവർത്തിപ്പിക്കുകയോ വൈദ്യുതി സ്വിച്ച് മാറ്റുകയോ ചെയ്യരുത്. പ്രധാന സ്വിച്ചിലെത്താൻ വെള്ളത്തിലിറങ്ങേണ്ടിവന്നാൽ വൈദ്യുതി വിച്ഛേദിക്കാൻ ഇലക്ട്രീഷ്യന്റെ സഹായം തേടുക. വൈദ്യുതി പുനഃസ്ഥാപിക്കുന്നതിന് മുമ്പ് വൈദ്യുതസംവിധാനം പരിശോധിപ്പിക്കുക.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  },
+  {
+    "id": "cdc-food-water",
+    "title": "CDC: food and drinking water after flooding",
+    "url": "https://www.cdc.gov/floods/safety/reentering-your-flooded-home-safety.html",
+    "checked_on": "2026-10-03",
+    "text": "Discard food touched by floodwater. Follow local health department instructions about safe drinking water. Avoid suspected contaminated water for drinking, food preparation, personal hygiene or baby formula. Use safe bottled, boiled or treated water as advised locally.",
+    "text_malayalam": "പ്രളയജലം തൊട്ട ഭക്ഷണം ഉപേക്ഷിക്കുക. സുരക്ഷിത കുടിവെള്ളത്തെക്കുറിച്ചുള്ള ആരോഗ്യവകുപ്പിന്റെ നിർദ്ദേശങ്ങൾ പാലിക്കുക. മലിനമാണെന്ന് സംശയിക്കുന്ന വെള്ളം കുടിക്കാനോ ഭക്ഷണം തയ്യാറാക്കാനോ ശുചിത്വത്തിനോ കുഞ്ഞിന്റെ ഭക്ഷണത്തിനോ ഉപയോഗിക്കരുത്. പ്രാദേശിക നിർദ്ദേശപ്രകാരം സുരക്ഷിത കുപ്പിവെള്ളമോ തിളപ്പിച്ചോ ശുദ്ധീകരിച്ചോ ഉള്ള വെള്ളം ഉപയോഗിക്കുക.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  },
+  {
+    "id": "cdc-generator",
+    "title": "CDC: generator safety after flooding",
+    "url": "https://www.cdc.gov/floods/safety/reentering-your-flooded-home-safety.html",
+    "checked_on": "2026-10-03",
+    "text": "Never run a fuel-powered generator inside a home, basement, garage or other enclosed or partly enclosed space. Keep it at least 20 feet from doors, windows and vents to reduce carbon monoxide poisoning risk.",
+    "text_malayalam": "ഇന്ധനത്തിൽ പ്രവർത്തിക്കുന്ന ജനറേറ്റർ വീടിനകത്തോ അടിത്തറയിലോ ഗാരേജിലോ അടഞ്ഞതോ ഭാഗികമായി അടഞ്ഞതോ ആയ ഇടങ്ങളിൽ പ്രവർത്തിപ്പിക്കരുത്. കാർബൺ മോണോക്സൈഡ് വിഷബാധ കുറയ്ക്കാൻ വാതിലുകൾ, ജനലുകൾ, വായുസഞ്ചാര തുറവുകൾ എന്നിവയിൽനിന്ന് കുറഞ്ഞത് 20 അടി അകലത്തിൽ വെക്കുക.",
+    "translation_provenance": "Project-maintained Malayalam paraphrase of the linked English safety guidance; not official translated publication."
+  }
+]

@@ -1,0 +1,19 @@
+message,expected,predicted
+Our family needs shelter after leaving the flooded house,MODERATE,HIGH
+Light rain is falling and we only need weather information,LOW,LOW
+A family has been swept away by fast moving water,HIGH,LOW
+An injured person is bleeding heavily and cannot leave the flooded area,HIGH,HIGH
+Our neighbourhood is isolated by a flooded road with no immediate injuries,MODERATE,LOW
+We need help moving belongings after safely leaving the house,MODERATE,HIGH
+Power is out and safe residents request clean water and supplies,MODERATE,MODERATE
+There is a fallen live power line in the water and a person is injured,HIGH,HIGH
+All family members are safe on dry ground and need information,LOW,LOW
+No flooding at home we are monitoring rain warnings,LOW,LOW
+We are planning an emergency kit and need advice,LOW,MODERATE
+The only exit is submerged and a baby is stuck inside,HIGH,HIGH
+Small puddles are forming on the street and everyone is safe,LOW,LOW
+A pregnant woman is trapped and needs immediate medical help,HIGH,HIGH
+Road flooding prevents relief deliveries and we need assistance,MODERATE,MODERATE
+People are trapped in a car surrounded by floodwater,HIGH,HIGH
+Can you provide the contact of the relief centre,LOW,MODERATE
+We need clothing and blankets at the temporary shelter,MODERATE,MODERATE

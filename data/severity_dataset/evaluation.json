@@ -1,0 +1,157 @@
+{
+  "training_source": "synthetic_demo",
+  "notice": "Synthetic training examples; uncalibrated demonstration score; admin verification required.",
+  "sample_count": 60,
+  "training_count": 42,
+  "held_out_count": 18,
+  "split_seed": 42,
+  "preprocessing": "TF-IDF fitted only on training split",
+  "classes": [
+    "LOW",
+    "MODERATE",
+    "HIGH"
+  ],
+  "classification_report": {
+    "LOW": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 6.0
+    },
+    "MODERATE": {
+      "precision": 0.6,
+      "recall": 0.5,
+      "f1-score": 0.5454545454545454,
+      "support": 6.0
+    },
+    "HIGH": {
+      "precision": 0.7142857142857143,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.7692307692307693,
+      "support": 6.0
+    },
+    "accuracy": 0.6666666666666666,
+    "macro avg": {
+      "precision": 0.6603174603174603,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6604506604506604,
+      "support": 18.0
+    },
+    "weighted avg": {
+      "precision": 0.6603174603174603,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6604506604506605,
+      "support": 18.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      4,
+      2,
+      0
+    ],
+    [
+      1,
+      3,
+      2
+    ],
+    [
+      1,
+      0,
+      5
+    ]
+  ],
+  "held_out_examples": [
+    {
+      "message": "Our family needs shelter after leaving the flooded house",
+      "expected": "MODERATE",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Light rain is falling and we only need weather information",
+      "expected": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "message": "A family has been swept away by fast moving water",
+      "expected": "HIGH",
+      "predicted": "LOW"
+    },
+    {
+      "message": "An injured person is bleeding heavily and cannot leave the flooded area",
+      "expected": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Our neighbourhood is isolated by a flooded road with no immediate injuries",
+      "expected": "MODERATE",
+      "predicted": "LOW"
+    },
+    {
+      "message": "We need help moving belongings after safely leaving the house",
+      "expected": "MODERATE",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Power is out and safe residents request clean water and supplies",
+      "expected": "MODERATE",
+      "predicted": "MODERATE"
+    },
+    {
+      "message": "There is a fallen live power line in the water and a person is injured",
+      "expected": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "All family members are safe on dry ground and need information",
+      "expected": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "message": "No flooding at home we are monitoring rain warnings",
+      "expected": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "message": "We are planning an emergency kit and need advice",
+      "expected": "LOW",
+      "predicted": "MODERATE"
+    },
+    {
+      "message": "The only exit is submerged and a baby is stuck inside",
+      "expected": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Small puddles are forming on the street and everyone is safe",
+      "expected": "LOW",
+      "predicted": "LOW"
+    },
+    {
+      "message": "A pregnant woman is trapped and needs immediate medical help",
+      "expected": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Road flooding prevents relief deliveries and we need assistance",
+      "expected": "MODERATE",
+      "predicted": "MODERATE"
+    },
+    {
+      "message": "People are trapped in a car surrounded by floodwater",
+      "expected": "HIGH",
+      "predicted": "HIGH"
+    },
+    {
+      "message": "Can you provide the contact of the relief centre",
+      "expected": "LOW",
+      "predicted": "MODERATE"
+    },
+    {
+      "message": "We need clothing and blankets at the temporary shelter",
+      "expected": "MODERATE",
+      "predicted": "MODERATE"
+    }
+  ],
+  "operational_validation": false
+}

@@ -1,0 +1,43 @@
+message,severity,source
+An elderly resident safely evacuated but needs regular medicine,MODERATE,synthetic_demo
+Our home is flooded but all people have reached the relief camp,MODERATE,synthetic_demo
+A disabled resident cannot evacuate as water rises around the bed,HIGH,synthetic_demo
+The canal water is below the bank and we want updates,LOW,synthetic_demo
+Only the garden is wet and all residents are safe,LOW,synthetic_demo
+The family is at a safe place but needs a relief delivery,MODERATE,synthetic_demo
+The drain is filling slowly but no homes are affected,LOW,synthetic_demo
+The house is collapsing with residents still inside,HIGH,synthetic_demo
+Five people stranded on a rooftop need rescuing now,HIGH,synthetic_demo
+Two children are trapped inside our flooded house and need rescue,HIGH,synthetic_demo
+Please share flood preparedness safety tips with our family,LOW,synthetic_demo
+The road is blocked by water and we need a safe route,MODERATE,synthetic_demo
+Rising water surrounds our family and there is no way out,HIGH,synthetic_demo
+Our safe family needs drinking water after the water service stopped,MODERATE,synthetic_demo
+We are safe and would like information about donation campaigns,LOW,synthetic_demo
+Water reached the upper floor and we need rescue immediately,HIGH,synthetic_demo
+We want to know the nearest shelter before rain starts,LOW,synthetic_demo
+The drinking water supply is contaminated and we need bottled water,MODERATE,synthetic_demo
+A child cannot breathe and floodwater blocks the ambulance,HIGH,synthetic_demo
+Water entered the ground floor and we moved everyone to safety,MODERATE,synthetic_demo
+Please tell us how to register a flood report,LOW,synthetic_demo
+Our house is dry and we are checking the latest alert,LOW,synthetic_demo
+Some water is on the field but people are safe at home,LOW,synthetic_demo
+We need urgent rescue for an elderly person stranded on the roof,HIGH,synthetic_demo
+Our street has light waterlogging and is still accessible,LOW,synthetic_demo
+We want directions to a shelter for preparedness,LOW,synthetic_demo
+We are safe upstairs but need food and clean drinking water,MODERATE,synthetic_demo
+Food stocks are running low for ten people in the shelter,MODERATE,synthetic_demo
+We need rescue for children stuck behind the broken bridge,HIGH,synthetic_demo
+We have run out of food at the relief camp,MODERATE,synthetic_demo
+A person is drowning in the river right now,HIGH,synthetic_demo
+The rain has stopped and there is no immediate danger here,LOW,synthetic_demo
+Water is collecting by the roadside without blocking traffic,LOW,synthetic_demo
+Several houses have water damage and residents need temporary accommodation,MODERATE,synthetic_demo
+We need sanitation supplies for families already evacuated,MODERATE,synthetic_demo
+Someone is unconscious after entering floodwater,HIGH,synthetic_demo
+A resident suffered electrocution in the flooded home,HIGH,synthetic_demo
+Water is rising rapidly and we cannot escape from the house,HIGH,synthetic_demo
+The local bridge is closed and residents need transport planning,MODERATE,synthetic_demo
+There is a minor puddle near our gate and nobody is affected,LOW,synthetic_demo
+My father is trapped in the basement with rapidly rising floodwater,HIGH,synthetic_demo
+Children at the shelter need dry clothes and meals,MODERATE,synthetic_demo
